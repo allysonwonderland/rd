@@ -7,7 +7,7 @@ import {
 	NavItem,
 	Jumbotron,
 } from "reactstrap";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 class Header extends Component {
 	constructor(props) {
@@ -31,9 +31,9 @@ class Header extends Component {
 			<React.Fragment>
 				<Navbar dark sticky="top" ml-auto expand="lg">
 					<div className="container">
-						<a class="navbar-brand" href="#">
+						<Link class="navbar-brand" to="/">
 							Rainbow Drop
-						</a>
+						</Link>
 						<NavbarToggler onClick={this.toggleNav} />
 						<Collapse isOpen={this.state.isNavOpen} navbar>
 							<Nav navbar className="justify-content-end align-middle ml-auto">
