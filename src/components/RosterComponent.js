@@ -3,19 +3,6 @@ import { Breadcrumb, BreadcrumbItem } from "reactstrap";
 import { Link } from "react-router-dom";
 
 function Roster(props) {
-	// const Hello = (props) => (
-	// 	<div>
-	// 		{props.db.sheet1.map((data) => (
-	// 			<span>{data.id}</span>
-	// 		))}
-	// 	</div>
-	// );
-
-	// Hello.propTypes = {
-	// 	db: PropTypes.shape({
-	// 		sheet1: PropTypes.arrayOf(PropTypes.object),
-	// 	}),
-	// };
 	return (
 		<div className="container main">
 			<div className="row">
