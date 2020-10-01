@@ -12,7 +12,9 @@ import { Switch, Route, Redirect, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 
 class Main extends Component {
+  
   render() {
+    const HomePage = () => {
     return (
       <div>
         <Header />
