@@ -19,7 +19,8 @@
     "reactstrap": "8.5.1",
     "redux": "4.0.5",
     "typeface-lobster": "^0.0.72",
-    "typeface-open-sans": "^0.0.75"
+    "typeface-open-sans": "^0.0.75",
+    "yarn": "^1.22.10"
   },
   "scripts": {
     "start": "react-scripts start",
