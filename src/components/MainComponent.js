@@ -12,14 +12,12 @@ import { Switch, Route, Redirect, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 
 class Main extends Component {
-  
   render() {
-    const HomePage = () => {
     return (
       <div>
         <Header />
         <Switch>
-          <Route path="/home" component={HomePage} />
+          <Route path="/home" component={Home} />
           <Route exact path="/calendar" component={Calendar} />
           <Route exact path="/about" component={About} />
           <Route exact path="/rules" component={Rules} />
@@ -31,8 +29,7 @@ class Main extends Component {
         <Footer />
       </div>
     );
-  }}
+  }
 }
-
 
 export default Main;
