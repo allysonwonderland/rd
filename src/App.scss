@@ -1,29 +1,46 @@
-$dark-color: #1b1f3a;
-$mediumdark-color: #53354a;
-$medium-color: #a64942;
-$light-color: #ff7844;
+$dark-color: #160f29;
+$dark-color-gradient: #160f29da;
+$mediumdark-color-gradient: #246a73da;
+$mediumdark-color: #246a73;
+$medium-color-gradient: #368f8bd5;
+$medium-color: #368f8b;
+$light-color: #ddbea8;
+$light2-color: #f3dfc1;
 $bg-color: #5442a613;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Milonga&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 
 body {
 	font-family: "Open Sans", sans-serif;
 	background-color: $bg-color;
-	background-image: url("./img/carbon_fibre.png");
+	background-color: #ffffff;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' %3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='0' y2='1' gradientTransform='rotate(0,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%23160f29'/%3E%3Cstop offset='1' stop-color='%23246a73'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpattern id='b' width='4' height='4' patternUnits='userSpaceOnUse'%3E%3Ccircle fill='%23ffffff' cx='2' cy='2' r='2'/%3E%3C/pattern%3E%3Crect width='100%25' height='100%25' fill='url(%23a)'/%3E%3Crect width='100%25' height='100%25' fill='url(%23b)' fill-opacity='0.11'/%3E%3C/svg%3E");
+	background-attachment: fixed;
+	background-size: cover;
 }
 
 h1,
 h2,
 h3,
 .card-body > .card-title {
-	font-family: "Lobster", cursive;
+	font-family: "Ubuntu", "Merriweather", "Montserrat Alternates", cursive;
+	color: $dark-color;
+	text-transform: none;
 }
 
+.card-header {
+	background-color: $mediumdark-color;
+}
 .card-title {
 	font-weight: 500;
 	font-size: 1.25rem;
 }
 
 h2 {
-	color: #3046c5;
+	color: $mediumdark-color;
 }
 
 .card-img-overlay .card-title {
@@ -32,27 +49,40 @@ h2 {
 }
 
 .row-content {
-	padding: 50px 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
 	border-bottom: 1px ridge;
-	min-height: 200px;
 }
 
 .site-footer {
-	background-image: linear-gradient($light-color, white);
-	padding: 20px 0;
+	background-color: $mediumdark-color;
+	padding: 20px;
+	margin: 0;
 }
 
 .jumbotron {
 	margin: 0;
 	padding: 30px;
-	background-image: linear-gradient(to right, $medium-color, $mediumdark-color);
+	background-size: cover;
+	background-image: linear-gradient(
+			to right,
+			$dark-color-gradient,
+			$mediumdark-color-gradient
+		),
+		url("./img/rappy-header.png");
 	color: white;
-	min-height: 300px;
-}
-
-.jumbotron h2 {
-	color: rgba(255, 255, 255, 0.548);
-	text-transform: lowercase;
+	min-height: 350px;
+	h2 {
+		color: $light-color;
+		text-transform: none;
+		text-shadow: 0px 0px 5px $dark-color;
+		font-variant: all-petite-caps;
+	}
+	h1 {
+		text-shadow: 0px 0px 5px $dark-color;
+		text-transform: uppercase;
+	}
 }
 
 .navbar-dark {
@@ -61,12 +91,22 @@ h2 {
 
 .navbar {
 	text-transform: uppercase;
+	color: white;
 	font-size: 0.9em;
 	margin-right: 0;
+	vertical-align: middle;
+	.headerlink {
+		padding-left: 20px;
+		a:hover {
+			background-color: $mediumdark-color !important;
+		}
+	}
 }
-.navbar a:hover {
-	background-color: $medium-color;
+
+.faicon {
+	color: $mediumdark-color;
 }
+
 .main {
 	background-color: white;
 	padding: 20px;
@@ -75,4 +115,20 @@ h2 {
 .top {
 	background-color: white;
 	padding: 0;
+	height: 100%;
+	position: relative;
+	width: 100%;
+}
+
+.rowtop {
+	position: absolute;
+	bottom: 50px;
+	right: 50px;
+	text-align: right;
+	vertical-align: bottom;
+	width: 100%;
+}
+
+.breadcrumb {
+	background-color: $light2-color;
 }

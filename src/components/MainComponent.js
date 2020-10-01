@@ -7,6 +7,7 @@ import Home from "./HomeComponent";
 import Apply from "./ApplyComponent";
 import About from "./AboutComponent";
 import Resources from './ResourcesComponent';
+import Calendar from './CalendarComponent';
 import { Switch, Route, Redirect, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 
@@ -17,6 +18,7 @@ class Main extends Component {
         <Header />
         <Switch>
           <Route path="/home" component={Home} />
+          <Route exact path="/calendar" component={Calendar} />
           <Route exact path="/about" component={About} />
           <Route exact path="/rules" component={Rules} />
           <Route exact path="/roster" component={Roster} />
