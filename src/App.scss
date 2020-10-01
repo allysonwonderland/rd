@@ -31,6 +31,22 @@ h3,
 	text-transform: none;
 }
 
+h1 {
+	.jumbotron > & {
+		text-shadow: 0px 0px 5px $dark-color;
+		text-transform: uppercase;
+	}
+}
+
+h2 {
+	.jumbotron > & {
+		color: $light-color;
+		text-transform: none;
+		text-shadow: 0px 0px 5px $dark-color;
+		font-variant: all-petite-caps;
+	}
+}
+
 .card-header {
 	background-color: $mediumdark-color;
 }
@@ -73,16 +89,6 @@ h2 {
 		url("./img/rappy-header.png");
 	color: white;
 	min-height: 350px;
-	h2 {
-		color: $light-color;
-		text-transform: none;
-		text-shadow: 0px 0px 5px $dark-color;
-		font-variant: all-petite-caps;
-	}
-	h1 {
-		text-shadow: 0px 0px 5px $dark-color;
-		text-transform: uppercase;
-	}
 }
 
 .navbar-dark {
@@ -106,7 +112,12 @@ h2 {
 .faicon {
 	color: $mediumdark-color;
 }
-
+.container
+  // shared styles
+  header > &
+    // header styles
+  main > &
+    // main styles
 .main {
 	background-color: white;
 	padding: 20px;

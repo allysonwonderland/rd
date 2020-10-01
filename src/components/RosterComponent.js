@@ -1,7 +1,6 @@
 import React from "react";
 import { Breadcrumb, BreadcrumbItem } from "reactstrap";
 import { Link } from "react-router-dom";
-import { withGoogleSheets } from "react-db-google-sheets";
 
 function Roster(props) {
 	// const Hello = (props) => (
@@ -38,4 +37,4 @@ function Roster(props) {
 	);
 }
 
-export default withGoogleSheets("sheet1")(Roster);
+export default Roster;
