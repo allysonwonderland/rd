@@ -1,14 +1,5 @@
 import React from "react";
-import {
-	Card,
-	CardBody,
-	CardHeader,
-	Media,
-	Breadcrumb,
-	BreadcrumbItem,
-} from "reactstrap";
 import PSO2Logo from "../img/pso2logo.png";
-import { Link } from "react-router-dom";
 
 function Footer(props) {
 	return (
@@ -16,22 +7,22 @@ function Footer(props) {
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						<img src={PSO2Logo} className="img-fluid" />
+						<img src={PSO2Logo} className="img-fluid" alt="pso2" />
 					</div>
 					<div class="col">
-						<img src={PSO2Logo} className="img-fluid" />
+						<img src={PSO2Logo} className="img-fluid" alt="pso2" />
 					</div>
 					<div class="col">
-						<img src={PSO2Logo} className="img-fluid" />
+						<img src={PSO2Logo} className="img-fluid" alt="pso2" />
 					</div>
 					<div class="col">
-						<img src={PSO2Logo} className="img-fluid" />
+						<img src={PSO2Logo} className="img-fluid" alt="pso2" />
 					</div>
 					<div class="col">
-						<img src={PSO2Logo} className="img-fluid" />
+						<img src={PSO2Logo} className="img-fluid" alt="pso2" />
 					</div>
 					<div class="col">
-						<img src={PSO2Logo} className="img-fluid" />
+						<img src={PSO2Logo} className="img-fluid" alt="pso2" />
 					</div>
 				</div>
 			</div>

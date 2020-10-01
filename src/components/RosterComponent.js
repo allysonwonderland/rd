@@ -1,7 +1,6 @@
 import React from "react";
 import { Breadcrumb, BreadcrumbItem } from "reactstrap";
 import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
 import { withGoogleSheets } from "react-db-google-sheets";
 
 function Roster(props) {

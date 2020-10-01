@@ -1,9 +1,5 @@
 import React from "react";
 import {
-	Card,
-	CardBody,
-	CardHeader,
-	Media,
 	Breadcrumb,
 	BreadcrumbItem,
 } from "reactstrap";
@@ -33,6 +29,7 @@ function Calendar(props) {
 						height="600px"
 						frameborder="0"
 						scrolling="no"
+						title="PSO2 Calendar"
 					></iframe>
 				</div>
 			</div>

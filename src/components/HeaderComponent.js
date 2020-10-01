@@ -1,20 +1,11 @@
 import React, { Component } from "react";
 import {
 	Navbar,
-	NavbarBrand,
 	Nav,
 	NavbarToggler,
 	Collapse,
 	NavItem,
 	Jumbotron,
-	Button,
-	Modal,
-	ModalHeader,
-	ModalBody,
-	Form,
-	FormGroup,
-	Input,
-	Label,
 } from "reactstrap";
 import { NavLink } from "react-router-dom";
 
@@ -89,11 +80,11 @@ class Header extends Component {
 				<div className="container top">
 					<Jumbotron fluid>
 						<div className="container rowtop align-text-bottom">
-						<div className="row">
-							<div className="col">
-								<h1>Rainbow Drop</h1>
-								<h2>PSO2 Global, Ship 2 Alliance</h2>
-							</div>
+							<div className="row">
+								<div className="col">
+									<h1>Rainbow Drop</h1>
+									<h2>PSO2 Global, Ship 2 Alliance</h2>
+								</div>
 							</div>
 						</div>
 					</Jumbotron>{" "}

@@ -3,7 +3,6 @@ import {
 	Card,
 	CardBody,
 	CardHeader,
-	Media,
 	Breadcrumb,
   BreadcrumbItem,
 } from "reactstrap";
@@ -27,8 +26,6 @@ function About(props) {
 			</div>
 			<div className="row row-content">
 				<div className="col-sm-6">
-
-
 
 					<h3>Our Mission</h3>
 					<p>
