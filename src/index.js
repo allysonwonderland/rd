@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import 'font-awesome/css/font-awesome.css';
 import 'bootstrap-social/bootstrap-social.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'typeface-lobster';
 import 'typeface-open-sans';
+import "google-spreadsheet";
 import * as serviceWorker from './serviceWorker';
 import App from './App';
 

@@ -27,10 +27,10 @@ function Calendar(props) {
 			<div className="row row-content">
 				<div className="col">
 					<iframe
-						src="https://calendar.google.com/calendar/embed?src=rainbowrappy%40gmail.com&ctz=America%2FNew_York"
+						src="https://calendar.google.com/calendar/embed?src=rainbowrappy%40gmail.com&ctz=America%2FNew_York&mode=Agenda"
 						className="calendar"
 						width="100%"
-						height="800px"
+						height="600px"
 						frameborder="0"
 						scrolling="no"
 					></iframe>

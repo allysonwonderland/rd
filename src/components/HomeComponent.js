@@ -12,6 +12,7 @@ function Home(props) {
 			</div>
 			<div className="row row-content">
 				<div className="col">
+
 					Hi friends! Welcome to the Rainbow Drop website. We are a top 10
 					alliance on Phantasy Star Online 2 Global Servers Ship 2 (UR)! Most of
 					the information found on this website can be accessed through our

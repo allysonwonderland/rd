@@ -1,34 +1,42 @@
 import React from "react";
-import {
-  Card,
-  CardImg,
-  CardImgOverlay,
-  CardTitle,
-  Breadcrumb,
-  BreadcrumbItem,
-} from "reactstrap";
+import { Breadcrumb, BreadcrumbItem } from "reactstrap";
 import { Link } from "react-router-dom";
-
+import PropTypes from "prop-types";
+import { withGoogleSheets } from "react-db-google-sheets";
 
 function Roster(props) {
-  
-  return (
-    <div className="container">
-      <div className="row">
-        <div className="col">
-          <Breadcrumb>
-            <BreadcrumbItem>
-              <Link to="/home">Home</Link>
-            </BreadcrumbItem>
-            <BreadcrumbItem active>Roster</BreadcrumbItem>
-          </Breadcrumb>
-          <h2>Roster</h2>
-          <hr />
-        </div>
-      </div>
-      <div className="row"></div>
-    </div>
-  );
+	// const Hello = (props) => (
+	// 	<div>
+	// 		{props.db.sheet1.map((data) => (
+	// 			<span>{data.id}</span>
+	// 		))}
+	// 	</div>
+	// );
+
+	// Hello.propTypes = {
+	// 	db: PropTypes.shape({
+	// 		sheet1: PropTypes.arrayOf(PropTypes.object),
+	// 	}),
+	// };
+	return (
+		<div className="container main">
+			<div className="row">
+				<div className="col">
+					<Breadcrumb>
+						<BreadcrumbItem>
+							<Link to="/home">Home</Link>
+						</BreadcrumbItem>
+						<BreadcrumbItem acti666ve>Roster</BreadcrumbItem>
+					</Breadcrumb>
+					<h2>Roster</h2>
+					<hr />
+				</div>
+			</div>
+			<div className="row row-content">
+				<div className="col"></div>
+			</div>
+		</div>
+	);
 }
 
-export default Roster;
+export default withGoogleSheets("sheet1")(Roster);
