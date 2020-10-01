@@ -19,7 +19,7 @@ class Main extends Component {
       <div>
         <Header />
         <Switch>
-          <Route path="/home" component={Home} />
+          <Route path="/home" component={HomePage} />
           <Route exact path="/calendar" component={Calendar} />
           <Route exact path="/about" component={About} />
           <Route exact path="/rules" component={Rules} />
