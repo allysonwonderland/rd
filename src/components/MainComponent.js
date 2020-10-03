@@ -8,7 +8,7 @@ import Apply from "./ApplyComponent";
 import About from "./AboutComponent";
 import Resources from "./ResourcesComponent";
 import Calendar from "./CalendarComponent";
-import { Switch, Route, Redirect, Router } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 
 class Main extends Component {
 	render() {
