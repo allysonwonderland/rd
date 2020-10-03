@@ -17,7 +17,7 @@ const CalendarEmbed = () => (
 function Calendar(props) {
 	return (
 		<Container className="main">
-			<Row className="row-content">
+			<Row>
 				<Col>
 					<Breadcrumb>
 						<BreadcrumbItem>
@@ -26,6 +26,7 @@ function Calendar(props) {
 						<BreadcrumbItem active>Calendar</BreadcrumbItem>
 					</Breadcrumb>
 					<h2>Calendar</h2>
+					<hr />
 				</Col>
 			</Row>
 			<Row>

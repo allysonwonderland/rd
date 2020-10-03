@@ -1,19 +1,21 @@
 import React from "react";
 import {
-	Card,
-	CardBody,
-	CardHeader,
 	Breadcrumb,
-  BreadcrumbItem,
+	BreadcrumbItem,
+	Col,
+	Row,
+	Container,
+	Card,
+	CardHeader,
+	CardBody
 } from "reactstrap";
-
 import { Link } from "react-router-dom";
 
 function About(props) {
 	return (
-		<div className="container main">
-			<div className="row">
-				<div className="col">
+		<Container className="main">
+			<Row>
+				<Col>
 					<Breadcrumb>
 						<BreadcrumbItem>
 							<Link to="/home">Home</Link>
@@ -22,13 +24,10 @@ function About(props) {
 					</Breadcrumb>
 					<h2>About Us</h2>
 					<hr />
-				</div>
-			</div>
-			<div className="row row-content">
-				<div className="col-sm-6">
-
-					<h3>Our Mission</h3>
-					<p>
+				</Col>
+			</Row>
+			<Row className="row-content">
+				<Col className="col-sm-6">					
 						We present a curated database of the best campsites in the vast
 						woods and backcountry of the World Wide Web Wilderness. We increase
 						access to adventure for the public while promoting safe and
@@ -36,9 +35,8 @@ function About(props) {
 						staff personally verify each campsite to make sure that they are up
 						to our standards. We also present a platform for campers to share
 						reviews on campsites they have visited with each other.
-					</p>
-				</div>
-				<div className="col-sm-6">
+				</Col>
+				<Col className="col-sm-6">
 					<Card>
 						<CardHeader className="text-white">
 							<h3>Facts At a Glance</h3>
@@ -56,33 +54,11 @@ function About(props) {
 							</dl>
 						</CardBody>
 					</Card>
-				</div>
-				<div className="col">
-					<Card className="bg-light mt-3">
-						<CardBody>
-							<blockquote className="blockquote">
-								<p className="mb-0">
-									I will not follow where the path may lead, but I will go where
-									there is no path, and I will leave a trail.
-								</p>
-								<footer className="blockquote-footer">
-									Muriel Strode,{" "}
-									<cite title="Source Title">
-										"Wind-Wafted Wild Flowers" - The Open Court, 1903
-									</cite>
-								</footer>
-							</blockquote>
-						</CardBody>
-					</Card>
-				</div>
-			</div>
-			<div className="row row-content">
-				<div className="col-12">
-					<h3>Community Partners</h3>
-				</div>
-				<div className="col mt-4"></div>
-			</div>
-		</div>
+				</Col>
+
+			</Row>
+			
+		</Container>
 	);
 }
 

@@ -37,7 +37,6 @@ class Header extends Component {
 							<img
 								src={RDicon}
 								height="30"
-								width="30"
 								alt="Rainbow Drop"
 							/> Rainbow Drop
 						</NavbarBrand>
