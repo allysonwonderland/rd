@@ -17,12 +17,12 @@ class Main extends Component {
         <Header />
         <Switch>
           <Route path="/home" component={Home} />
-          <Route exact path="/calendar" component={Calendar} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/rules" component={Rules} />
-          <Route exact path="/roster" component={Roster} />
-          <Route exact path="/apply" component={Apply} />
-          <Route exact path="/resources" component={Resources} />
+          <Route path="/calendar" component={Calendar} />
+          <Route path="/about" component={About} />
+          <Route path="/rules" component={Rules} />
+          <Route path="/roster" component={Roster} />
+          <Route path="/apply" component={Apply} />
+          <Route path="/resources" component={Resources} />
           <Redirect to="/home" />
         </Switch>
         <Footer />
