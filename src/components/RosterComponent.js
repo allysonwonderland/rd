@@ -8,7 +8,7 @@ import {
 } from "reactstrap";
 import { Link } from "react-router-dom";
 
-function Roster(props) {
+function Roster() {
 	return (
 		<Container className="main">
 			<Row>

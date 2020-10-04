@@ -12,29 +12,23 @@ import { Link } from "react-router-dom";
 import { Control, LocalForm, Errors } from "react-redux-form";
 
 const required = (val) => val && val.length;
-const maxLength = (len) => (val) => !val || val.length <= len;
-const minLength = (len) => (val) => val && val.length >= len;
-const isNumber = (val) => !isNaN(+val);
-const validEmail = (val) =>
-	/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
 
 class Apply extends Component {
 	constructor(props) {
 		super(props);
 
 		this.state = {
-			firstName: "",
-			lastName: "",
-			phoneNum: "",
-			email: "",
+			discordTag: "",
+			playerId: "",
+			levels: "",
+			timezone: "",
 			agree: false,
-			contactType: "By Phone",
-			feedback: "",
+			joinReason: "",
 			touched: {
-				firstName: false,
-				lastName: false,
-				phoneNum: false,
-				email: false,
+				discordTag: false,
+				playerId: false,
+				levels: false,
+				timezone: false,
 			},
 		};
 
@@ -65,167 +59,127 @@ class Apply extends Component {
 					<Col className="col-md-10">
 						<LocalForm onSubmit={(values) => this.handleSubmit(values)}>
 							<Row className="form-group">
-								<Label htmlFor="firstName" md={2}>
-									First Name
+								<Label htmlFor="discordTag" md={3}>
+									Discord Tag
 								</Label>
-								<Col md={10}>
+								<Col md={9}>
 									<Control.text
-										model=".firstName"
-										id="firstName"
-										name="firstName"
-										placeholder="First Name"
+										model=".discordTag"
+										id="discordTag"
+										name="discordTag"
+										placeholder="Name#1234"
 										className="form-control"
 										validators={{
 											required,
-											minLength: minLength(2),
-											maxLength: maxLength(15),
 										}}
 									/>
 									<Errors
 										className="text-danger"
-										model=".firstName"
+										model=".discordTag"
 										show="touched"
 										component="div"
 										messages={{
 											required: "Required",
-											minLength: "Must be at least 2 characters",
-											maxLength: "Must be 15 characters or less",
 										}}
 									/>
 								</Col>
 							</Row>
 							<Row className="form-group">
-								<Label htmlFor="lastName" md={2}>
-									Last Name
+								<Label htmlFor="playerId" md={3}>
+									PSO2 Player ID
 								</Label>
-								<Col md={10}>
+								<Col md={9}>
 									<Control.text
-										model=".lastName"
-										id="lastName"
-										name="lastName"
-										placeholder="Last Name"
+										model=".playerId"
+										id="playerId"
+										name="playerId"
+										placeholder=""
 										className="form-control"
 										validators={{
 											required,
-											minLength: minLength(2),
-											maxLength: maxLength(15),
 										}}
 									/>
 									<Errors
 										className="text-danger"
-										model=".lastName"
+										model=".playerId"
 										show="touched"
 										component="div"
 										messages={{
 											required: "Required",
-											minLength: "Must be at least 2 characters",
-											maxLength: "Must be 15 characters or less",
 										}}
 									/>
 								</Col>
 							</Row>
 							<Row className="form-group">
-								<Label htmlFor="phoneNum" md={2}>
-									Phone
+								<Label htmlFor="levels" md={3}>
+									Main/Sub Class Levels
 								</Label>
-								<Col md={10}>
+								<Col md={9}>
 									<Control.text
-										model=".phoneNum"
-										id="phoneNum"
-										name="phoneNum"
-										placeholder="Phone number"
+										model=".levels"
+										id="levels"
+										name="levels"
+										placeholder="90 main/90 sub"
 										className="form-control"
 										validators={{
 											required,
-											minLength: minLength(10),
-											maxLength: maxLength(15),
-											isNumber,
 										}}
 									/>
 									<Errors
 										className="text-danger"
-										model=".phoneNum"
+										model=".levels"
 										show="touched"
 										component="div"
 										messages={{
 											required: "Required",
-											minLength: "Must be at least 10 numbers",
-											maxLength: "Must be 15 numbers or less",
-											isNumber: "Must be a number",
 										}}
 									/>
 								</Col>
 							</Row>
 							<Row className="form-group">
-								<Label htmlFor="email" md={2}>
-									Email
+								<Label htmlFor="timezone" md={3}>
+									Timezone
 								</Label>
-								<Col md={10}>
+								<Col md={9}>
 									<Control.text
-										model=".email"
-										id="email"
-										name="email"
-										placeholder="Email"
+										model=".timezone"
+										id="timezone"
+										name="timezone"
+										placeholder="EST America/New York"
 										className="form-control"
 										validators={{
 											required,
-											validEmail,
 										}}
 									/>
 									<Errors
 										className="text-danger"
-										model=".email"
+										model=".timezone"
 										show="touched"
 										component="div"
 										messages={{
 											required: "Required",
-											validEmail: "Invalid email address",
 										}}
 									/>
 								</Col>
 							</Row>
 							<Row className="form-group">
-								<Col md={{ size: 4, offset: 2 }}>
-									<div className="form-check">
-										<Label check>
-											<Control.checkbox
-												model=".agree"
-												name="agree"
-												className="form-check-input"
-											/>{" "}
-											<strong>May we contact you?</strong>
-										</Label>
-									</div>
-								</Col>
-								<Col md={4}>
-									<Control.select
-										model=".contactType"
-										name="contactType"
-										className="form-control"
-									>
-										<option>By Phone</option>
-										<option>By Email</option>
-									</Control.select>
-								</Col>
-							</Row>
-							<Row className="form-group">
-								<Label htmlFor="feedback" md={2}>
-									Your Feedback
+								<Label htmlFor="joinReason" md={3}>
+									Why do you want to join Rainbow Drop?
 								</Label>
-								<Col md={10}>
+								<Col md={9}>
 									<Control.textarea
-										model=".feedback"
-										id="feedback"
-										name="feedback"
-										rows="12"
+										model=".joinReason"
+										id="joinReason"
+										name="joinReason"
+										rows="10"
 										className="form-control"
 									/>
 								</Col>
 							</Row>
 							<Row className="form-group">
-								<Col md={{ size: 10, offset: 2 }}>
-									<Button type="submit" color="primary">
-										Send Feedback
+								<Col md={{ size: 9, offset: 3 }}>
+									<Button type="submit" className="button">
+										Send Application
 									</Button>
 								</Col>
 							</Row>

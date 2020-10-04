@@ -61,16 +61,16 @@ h2 {
   min-height: 350px;
 }
 
+.jumbotron h1 {
+  text-shadow: 0px 0px 5px #160f29;
+  text-transform: uppercase;
+}
+
 .jumbotron h2 {
   color: #ddbea8;
   text-transform: none;
   text-shadow: 0px 0px 5px #160f29;
   font-variant: all-petite-caps;
-}
-
-.jumbotron h1 {
-  text-shadow: 0px 0px 5px #160f29;
-  text-transform: uppercase;
 }
 
 .navbar-dark {
@@ -121,5 +121,13 @@ h2 {
 
 .breadcrumb {
   background-color: #f3dfc1;
+}
+
+.button {
+  background-color: #160f29;
+}
+
+.button :hover {
+  background-color: #246a73;
 }
 /*# sourceMappingURL=App.css.map */

@@ -1,8 +1,7 @@
 import React from "react";
 
 function Resources(props) {
-
-  return <div />;
+	return <div />;
 }
 
 export default Resources;

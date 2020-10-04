@@ -6,7 +6,8 @@ import {
 	Collapse,
 	NavItem,
 	Jumbotron,
-	NavbarBrand
+	NavbarBrand,
+	Container,
 } from "reactstrap";
 import { NavLink } from "react-router-dom";
 import RDicon from "../img/RDicon.png";
@@ -32,13 +33,9 @@ class Header extends Component {
 		return (
 			<React.Fragment>
 				<Navbar dark sticky="top" ml-auto expand="lg">
-					<div className="container">
+					<Container>
 						<NavbarBrand className="mr-auto" href="/">
-							<img
-								src={RDicon}
-								height="30"
-								alt="Rainbow Drop"
-							/> Rainbow Drop
+							<img src={RDicon} height="30" alt="Rainbow Drop" /> Rainbow Drop
 						</NavbarBrand>
 						<NavbarToggler onClick={this.toggleNav} />
 						<Collapse isOpen={this.state.isNavOpen} navbar>
@@ -80,7 +77,7 @@ class Header extends Component {
 								</NavItem>
 							</Nav>
 						</Collapse>
-					</div>
+					</Container>
 				</Navbar>
 
 				<div className="container top">

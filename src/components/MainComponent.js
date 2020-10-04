@@ -14,18 +14,18 @@ class Main extends Component {
 	render() {
 		return (
 			<div>
-					<Header />
-					<Switch>
-						<Route path="/home" component={Home} />
-						<Route path="/calendar" component={Calendar} />
-						<Route path="/about" component={About} />
-						<Route path="/rules" component={Rules} />
-						<Route path="/roster" component={Roster} />
-						<Route path="/apply" component={Apply} />
-						<Route path="/resources" component={Resources} />
-						<Redirect to="/home" />
-					</Switch>
-					<Footer />
+				<Header />
+				<Switch>
+					<Route path="/home" component={Home} />
+					<Route path="/calendar" component={Calendar} />
+					<Route path="/about" component={About} />
+					<Route path="/rules" component={Rules} />
+					<Route path="/roster" component={Roster} />
+					<Route path="/apply" component={Apply} />
+					<Route path="/resources" component={Resources} />
+					<Redirect to="/home" />
+				</Switch>
+				<Footer />
 			</div>
 		);
 	}
